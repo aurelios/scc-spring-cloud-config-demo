@@ -1,2 +1,4 @@
-.idea/
-scc-config-server/.idea/
+/.idea/
+/scc-config-server/.idea/
+/scc-config-server/.target/
+/scc-limits-service/target/
