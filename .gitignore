@@ -1,4 +1,5 @@
 /.idea/
 /scc-config-server/.idea/
 /scc-config-server/.target/
+/scc-limits-service/.idea/
 /scc-limits-service/target/
