@@ -1,41 +1,33 @@
 # scc-spring-cloud-config-demo
 This repository uses git subtree to centralize multiple microservices projects using Spring Cloud Framework to solve the Challenges of Microservices Achitecture.
 
-# Challenges of Microservices
+![img.png](img.png)
 
-### Configuration Management
-Due to the large number of microservices how to manage multiple configurations from different environments ?
+## What the Challenges of Microservices Architecture approached here ?
 
-* Spring Cloud Config Server ([scc-config-server](scc-config-server))
+* ### Configuration Management
+    Due to the large number of microservices how to manage multiple configurations from different environments ?
 
-### Dynamic Scale Up and Scale Down
-How to distribute the loads of the microservice when a instance goes up or down ?
-* Naming Server(Eureka)
-* Ribbon(Client Side Load Balancing)
-* Feign(Easier REST Clients)
-
-### Visibility
-* Zipking
-* Netflix API Gateway
-
-### Fault Tolerance
-* Hystrix
-
-### Zero Downtime Deployments
-
+## Projects
+* [scc-config-server](scc-config-server) -> Spring Cloud Config Server
+* [scc-limits-service](scc-config-server) -> microservice
+* [scc-local-config-repo](scc-config-server) -> repository of configuration files.
 
 ## Git Subtree commands
 How to use Git subtree ?
 
-1 - To Create the subtree project
+1 - Add your remote repository
+`git remote add -f scc-config-server https://github.com/aurelios/scc-config-server.git`
 
-`git subtree add --prefix scc-config-server https://github.com/aurelios/scc-config-server.git main --squash`
+2 - To Create the subtree project
 
-2 - To pull the commits from the main project
+`git subtree add --prefix scc-config-server scc-config-server main --squash`
 
-`git subtree pull --prefix scc-config-server https://github.com/aurelios/scc-config-server.git main --squash`
+3 - To pull the commits from the main project
 
-3 - To push the commits of the subtree into the main project
+`git subtree pull --prefix scc-config-server scc-config-server main --squash`
 
-`git subtree push --prefix scc-config-server https://github.com/aurelios/scc-config-server.git main`
+4 - To push the commits of the subtree into the main project
+
+`git subtree push --prefix scc-config-server scc-config-server main`
 
